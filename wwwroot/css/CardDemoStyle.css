@@ -3,7 +3,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: #000;
 }
 
 .card-page {
@@ -79,4 +78,11 @@
 .page-indicator.active {
     background-color: white;
     transform: scale(1.2);
+}
+
+.PlayButton {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    z-index:9;
 }
