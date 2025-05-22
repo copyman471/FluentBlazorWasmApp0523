@@ -1,12 +1,72 @@
 ﻿@page "/introduction"
 
-<h2>
-	什么是Blazor？
-</h2>
+<FluentLabel Typo="Typography.PageTitle" Weight="FontWeight.Bold" MarginBlock="20px">
+	<FluentEmoji Value="@(new Microsoft.FluentUI.AspNetCore.Components.Emojis.SmileysEmotion.Color.Default.ThinkingFace())" />
+	什么是 Blazor ？
+</FluentLabel>
 
-<h2>
+<FluentCard Height="120px">
+	<p>Blazor is a modern front-end web framework based on HTML, CSS, and C# that helps you build web apps faster. With Blazor, build web apps using reusable components that can be run from both the client and the server so that you can deliver great web experiences.</p>
+	<p>
+		——由Microsoft提供的官方介绍（<FluentAnchor Href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor">链接</FluentAnchor>）
+	</p>
+</FluentCard>
+
+<FluentLabel Typo="Typography.Body" MarginBlock="20px">
+	Blazor 是一个开源的前端 Web 框架，它是 ASP.NET Core 项目的一部分。开发者可以选择与 C#/.NET 生态的高度集成，快速构建高性能的、现代化的交互式 Web 应用。Blazor并非是对 MVC(ASP.NET Core) 或 Razor Pages 的替代，而是对旧 ASP.NET 开发的新范式补充，旨在为开发者提供更多选择。
+	<br />
+	它允许开发者使用Web技术构建UI的同时，通过 C# 为其编写业务逻辑，并通过转译为 Wasm(WebAssembly) 在浏览器中执行，进而得到近乎无 JavaScript 的开发体验。对于仍然需要 JavaScript 的领域（如原生事件处理），Blazor 也提供了互操作 API 允许 JavaScript 运行时与 .NET 运行时相互调用。受益于与 .NET 本机框架的结合，Blazor 可以提供类似于 Electron 和 React Native 的轻量全栈开发。
+</FluentLabel>
+
+<FluentLabel Typo="Typography.PageTitle" Weight="FontWeight.Bold" MarginBlock="20px">
+	<FluentEmoji Value="@(new Microsoft.FluentUI.AspNetCore.Components.Emojis.TravelPlaces.Color.Default.GlobeWithMeridians())" />
 	Blazor 托管模型
-</h2>
+</FluentLabel>
+
+<FluentLabel Typo="Typography.Body" MarginBlock="20px">
+	就本质而言，Blazor 只有两种托管模型：服务器模式（Blazor Server）与Wasm模式（Blazor WebAssembly）。但为了行文方便，下文将仿照MSDN对于Blazor 托管模型的介绍，将其分为三部分：Blazor Server、Blazor WebAssembly、Blazor Hybrid。
+</FluentLabel>
+
+<FluentLabel Typo="Typography.Header" MarginBlock="20px"> Blazor Server </FluentLabel>
+
+<FluentLabel Typo="Typography.Body" MarginBlock="20px">
+	在 Blazor Server 模式下，界面更新、逻辑执行和状态管理都在服务器端运行，客户端通过 SignalR 与服务器保持连接。这种方式的优势在于初始加载速度快、对客户端设备要求低，并且可以充分利用服务器端的计算资源。自然而然的，这种模式对网络延迟较为敏感，且由于长连接导致相对于传统的 ASP.NET Core MVC需要更多资源管理客户端的连接和状态。适合快速原型开发、内部中台服务，以及对启动速度有要求的SaaS。
+</FluentLabel>
+
+<img src="/image/blazor-server.png" class="IntroductionImg">
+
+<FluentLabel Typo="Typography.Header" MarginBlock="20px"> Blazor WebAssembly </FluentLabel>
+
+<FluentLabel Typo="Typography.Body" MarginBlock="20px">
+	Blazor Wasm的最大特点在于它允许用户通过 Wasm 在浏览器中本地运行 .NET Runtime，进而允许使用 C# 编写业务逻辑。在第一次访问时，用户需要从服务器下载Runtime、Razor组件与相关依赖项。之后便可脱离网络在浏览器中独立运行（若没有业务需要与服务器通信）。它适用于对首次启动时间不敏感，但对高性能和计算密集型业务有需求的场景。
+	<br>
+	虽然 Blazor WebAssembly 的开发体验在ASP.NET Core中最为舒适与完整，但它也能以REST API的形式与其他后端/API框架结合（如Spring Boot、PHP、FastAPI等）。相对而言，Blazor WebAssembly 也更接近主流前端框架范式。
+</FluentLabel>
+
+<FluentLabel Typo="Typography.Body" MarginBlock="20px">
+	虽然 Blazor WebAssembly 的开发体验在ASP.NET Core中最为舒适与完整，但它也能以REST API的形式与其他后端/API框架结合（如Spring Boot、PHP、FastAPI等）。相对而言，Blazor WebAssembly 也更接近主流前端框架范式。
+</FluentLabel>
+
+<img src="/image/blazor-webassembly.png" class=IntroductionImg>
+
+<FluentLabel Typo="Typography.Header" MarginBlock="20px"> Blazor Hybrid </FluentLabel>
+
+<FluentLabel Typo="Typography.Body" MarginBlock="20px">
+	正如上文所提到的那样，Blazor 能够与 .NET 本机框架相结合，构建跨平台的全栈开发技术栈。虽然 Blazor WebAssembly 亦可通过 PWA 实现脱机应用，但框架所提供的平台原生 API 封装无疑能够提供更强与更为颗粒化的控制能力。尤其是在启用AOT模式时，Blazor 的性能表现足可媲美 C/C++ 和 Rust，使开发者在享受前后端技术栈统一带来的开发效率提升的同时，获得与原生应用接近的运行性能。
+</FluentLabel>
+
+<img src="/image/hybrid-apps-1.png" class=IntroductionImg>
+
+<style>
+	.IntroductionImg{
+		display: block;
+        width: 60%;
+		height: auto;
+		margin:0 auto
+	}
+</style>
+
+
 @code {
 
 }

@@ -1,10 +1,10 @@
 {
   "mainAssemblyName": "FluentBlazorWasmApp0523",
   "resources": {
-    "hash": "sha256-WMWgxdjBQNw/s6Yc1l4EQ5ewY/laQ8TKaaHUDry7NNI=",
+    "hash": "sha256-63p10dat8reTgDuRvHr0RAXOt4pc4JWlO+5JOBtgJA0=",
     "fingerprinting": {
       "BootstrapBlazor.v7bvojga2h.wasm": "BootstrapBlazor.wasm",
-      "FluentBlazorWasmApp0523.tj7l2wzq7n.wasm": "FluentBlazorWasmApp0523.wasm",
+      "FluentBlazorWasmApp0523.wmywvq0lid.wasm": "FluentBlazorWasmApp0523.wasm",
       "Microsoft.AspNetCore.Authorization.23rl9up8ao.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.Authorization.52k4yblfhj.wasm": "Microsoft.AspNetCore.Components.Authorization.wasm",
       "Microsoft.AspNetCore.Components.Forms.locv0uoosg.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
@@ -109,7 +109,7 @@
     },
     "assembly": {
       "BootstrapBlazor.v7bvojga2h.wasm": "sha256-iw4NN239agp5GF1suNCNEIEJ3tVdvQeVPlBEnIAmnSc=",
-      "FluentBlazorWasmApp0523.tj7l2wzq7n.wasm": "sha256-h3SU91oaFKSyD/JYk01U2QbSE3GFYRzeVqN3e418AI4=",
+      "FluentBlazorWasmApp0523.wmywvq0lid.wasm": "sha256-qCHoJ9ji6DDRF3RAwxTiMMidjtHB5jPod0H2t7dlLyw=",
       "Microsoft.AspNetCore.Authorization.23rl9up8ao.wasm": "sha256-Xu2ZV/6WQh0AcDZKOPK2v6xWSITkT61xlUbmm/ydxQ4=",
       "Microsoft.AspNetCore.Components.Authorization.52k4yblfhj.wasm": "sha256-jbzO0iXcxGhrZlVrxfXZDxDsP9BBCLcDrmMekHDnb5Q=",
       "Microsoft.AspNetCore.Components.Forms.locv0uoosg.wasm": "sha256-9Qnhh515zXQO7kDCDYJOZvtTI8f3SMQAS4d8YGEGw24=",
