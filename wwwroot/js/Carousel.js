@@ -11,12 +11,6 @@
 
 function Player(status) {
     const audios = document.getElementsByClassName("MusicPlayer")
-
-    if (audios.length === 0) {
-        console.warn("未找到 MusicPlayer 元素");
-        return;
-    }
-
     const audio = audios[0];
 
     if (status === true) {
